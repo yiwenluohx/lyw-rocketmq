@@ -1,20 +1,18 @@
-package com.study.rocketmq.base.producer;
+package com.study.rocketmq.delay;
 
 import org.apache.rocketmq.client.producer.DefaultMQProducer;
 import org.apache.rocketmq.client.producer.SendResult;
 import org.apache.rocketmq.client.producer.SendStatus;
 import org.apache.rocketmq.common.message.Message;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.util.concurrent.TimeUnit;
 
 /**
  * @Author: luohx
- * @Description: 发送同步消息
- * @Date: 2021/7/6 0006 16:18
+ * @Description: 描述
+ * @Date: 2021/7/7 0007 15:08
  */
-@SpringBootApplication
-public class SyncProducer {
+public class Producer {
     public static void main(String[] args) throws Exception {
         //a、创建消息生产者producer，并指定生产者组名
         DefaultMQProducer producer = new DefaultMQProducer("group1");
@@ -29,7 +27,9 @@ public class SyncProducer {
              * 参数二：消息Tag
              * 参数三：消息内容
              */
-            Message msg = new Message("base", "Tag1", ("Hello World" + i).getBytes());
+            Message msg = new Message("DelayTopic", "Tag1", ("Hello World" + i).getBytes());
+            //设定延迟时间
+            msg.setDelayTimeLevel(2);
             //e、发送消息
             SendResult result = producer.send(msg);
             //发送状态
@@ -38,7 +38,7 @@ public class SyncProducer {
             String msgId = result.getMsgId();
             //消息接收队列ID
             int queueId = result.getMessageQueue().getQueueId();
-            System.out.println("发送状态："+ result + ",消息ID："+ msgId+ "，队列："+ queueId);
+            System.out.println("发送状态：" + result + ",消息ID：" + msgId + "，队列：" + queueId);
             //线程睡1s
             TimeUnit.SECONDS.sleep(1L);
         }
