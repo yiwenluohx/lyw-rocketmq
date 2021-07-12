@@ -42,7 +42,7 @@ public class OrderServiceTest {
         order.setMoneyPaid(new BigDecimal(100));
         orderService.confirmOrder(order);
 
-//        System.in.read();
+        System.in.read();
 
     }
 }
