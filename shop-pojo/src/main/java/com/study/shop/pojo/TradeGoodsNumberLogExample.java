@@ -1,4 +1,4 @@
-package com.itheima.shop.pojo;
+package com.study.shop.pojo;
 
 import java.io.Serializable;
 import java.util.ArrayList;

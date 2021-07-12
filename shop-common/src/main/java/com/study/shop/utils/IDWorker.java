@@ -1,4 +1,4 @@
-package com.itheima.utils;
+package com.study.shop.utils;
 
 public class IDWorker {
 

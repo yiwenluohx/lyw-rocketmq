@@ -1,4 +1,4 @@
-package com.itheima.shop;
+package com.study.shop;
 
 import com.alibaba.dubbo.spring.boot.annotation.EnableDubboConfiguration;
 import org.springframework.boot.SpringApplication;

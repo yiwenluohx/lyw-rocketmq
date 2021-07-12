@@ -7,6 +7,8 @@
     <groupId>com.study</groupId>
     <artifactId>lyw-rocketmq</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
     <modules>
         <!--rocketmq基础案例-->
         <module>simple-example</module>
@@ -16,20 +18,18 @@
         <module>springboot-dubbo-interface</module>
         <module>springboot-dubbo-provider</module>
         <module>springboot-dubbo-consumer</module>
+        <!--rocketmq+dubbo+springboot+mysql+zookeeper实现支付、下单案例-->
         <module>shop-api</module>
         <module>shop-common</module>
         <module>shop-coupon-service</module>
         <module>shop-goods-service</module>
-        <module>shop.order-service</module>
+        <module>shop-order-service</module>
         <module>shop-order-web</module>
         <module>shop-pay-service</module>
         <module>shop-pay-web</module>
         <module>shop-pojo</module>
         <module>shop-user-service</module>
-        <!--rocketmq+dubbo+springboot+mysql+zookeeper实现支付、下单案例-->
     </modules>
-    <packaging>pom</packaging>
-
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -40,6 +40,8 @@
         <lombok.version>1.18.6</lombok.version>
         <dubbo-spring-boot-starter.version>2.0.0</dubbo-spring-boot-starter.version>
         <zookeeper.version>3.6.3</zookeeper.version>
+        <zkclient.version>0.11</zkclient.version>
+        <mybatis-spring-boot-starter.version>2.1.4</mybatis-spring-boot-starter.version>
     </properties>
 
     <dependencyManagement>
@@ -76,7 +78,36 @@
                 <groupId>org.apache.zookeeper</groupId>
                 <artifactId>zookeeper</artifactId>
                 <version>${zookeeper.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j-log4j12</artifactId>
+                    </exclusion>
+                    <!--<exclusion>-->
+                    <!--<groupId>log4j</groupId>-->
+                    <!--<artifactId>log4j</artifactId>-->
+                    <!--</exclusion>-->
+                </exclusions>
             </dependency>
+
+            <dependency>
+                <groupId>com.101tec</groupId>
+                <artifactId>zkclient</artifactId>
+                <version>${zkclient.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j-log4j12</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>${mybatis-spring-boot-starter.version}</version>
+            </dependency>
+
 
         </dependencies>
     </dependencyManagement>

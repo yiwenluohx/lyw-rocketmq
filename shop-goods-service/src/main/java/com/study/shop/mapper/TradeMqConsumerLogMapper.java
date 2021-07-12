@@ -1,8 +1,8 @@
-package com.itheima.shop.mapper;
+package com.study.shop.mapper;
 
-import com.itheima.shop.pojo.TradeMqConsumerLog;
-import com.itheima.shop.pojo.TradeMqConsumerLogExample;
-import com.itheima.shop.pojo.TradeMqConsumerLogKey;
+import com.study.shop.pojo.TradeMqConsumerLog;
+import com.study.shop.pojo.TradeMqConsumerLogExample;
+import com.study.shop.pojo.TradeMqConsumerLogKey;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 

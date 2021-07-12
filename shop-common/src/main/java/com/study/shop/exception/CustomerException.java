@@ -1,6 +1,6 @@
-package com.itheima.exception;
+package com.study.shop.exception;
 
-import com.itheima.constant.ShopCode;
+import com.study.shop.constant.ShopCode;
 
 /**
  * 自定义异常

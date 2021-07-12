@@ -1,4 +1,4 @@
-package com.itheima.constant;
+package com.study.shop.constant;
 
 /**
  * @author Think
