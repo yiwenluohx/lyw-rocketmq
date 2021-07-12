@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.itheima.shop.mapper.TradeMqProducerTempMapper" >
-  <resultMap id="BaseResultMap" type="com.itheima.shop.pojo.TradeMqProducerTemp" >
+<mapper namespace="com.study.shop.mapper.TradeMqProducerTempMapper" >
+  <resultMap id="BaseResultMap" type="com.study.shop.pojo.TradeMqProducerTemp" >
     <id column="id" property="id" jdbcType="VARCHAR" />
     <result column="group_name" property="groupName" jdbcType="VARCHAR" />
     <result column="msg_topic" property="msgTopic" jdbcType="VARCHAR" />
@@ -72,7 +72,7 @@
   <sql id="Base_Column_List" >
     id, group_name, msg_topic, msg_tag, msg_key, msg_body, msg_status, create_time
   </sql>
-  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.itheima.shop.pojo.TradeMqProducerTempExample" >
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.study.shop.pojo.TradeMqProducerTempExample" >
     select
     <if test="distinct" >
       distinct
@@ -96,13 +96,13 @@
     delete from trade_mq_producer_temp
     where id = #{id,jdbcType=VARCHAR}
   </delete>
-  <delete id="deleteByExample" parameterType="com.itheima.shop.pojo.TradeMqProducerTempExample" >
+  <delete id="deleteByExample" parameterType="com.study.shop.pojo.TradeMqProducerTempExample" >
     delete from trade_mq_producer_temp
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.itheima.shop.pojo.TradeMqProducerTemp" >
+  <insert id="insert" parameterType="com.study.shop.pojo.TradeMqProducerTemp" >
     insert into trade_mq_producer_temp (id, group_name, msg_topic, 
       msg_tag, msg_key, msg_body, 
       msg_status, create_time)
@@ -110,7 +110,7 @@
       #{msgTag,jdbcType=VARCHAR}, #{msgKey,jdbcType=VARCHAR}, #{msgBody,jdbcType=VARCHAR}, 
       #{msgStatus,jdbcType=INTEGER}, #{createTime,jdbcType=TIMESTAMP})
   </insert>
-  <insert id="insertSelective" parameterType="com.itheima.shop.pojo.TradeMqProducerTemp" >
+  <insert id="insertSelective" parameterType="com.study.shop.pojo.TradeMqProducerTemp" >
     insert into trade_mq_producer_temp
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -165,7 +165,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.itheima.shop.pojo.TradeMqProducerTempExample" resultType="java.lang.Integer" >
+  <select id="countByExample" parameterType="com.study.shop.pojo.TradeMqProducerTempExample" resultType="java.lang.Integer" >
     select count(*) from trade_mq_producer_temp
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
@@ -217,7 +217,7 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.itheima.shop.pojo.TradeMqProducerTemp" >
+  <update id="updateByPrimaryKeySelective" parameterType="com.study.shop.pojo.TradeMqProducerTemp" >
     update trade_mq_producer_temp
     <set >
       <if test="groupName != null" >
@@ -244,7 +244,7 @@
     </set>
     where id = #{id,jdbcType=VARCHAR}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.itheima.shop.pojo.TradeMqProducerTemp" >
+  <update id="updateByPrimaryKey" parameterType="com.study.shop.pojo.TradeMqProducerTemp" >
     update trade_mq_producer_temp
     set group_name = #{groupName,jdbcType=VARCHAR},
       msg_topic = #{msgTopic,jdbcType=VARCHAR},

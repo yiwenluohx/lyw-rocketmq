@@ -1,15 +1,15 @@
-package com.itheima.shop.service.impl;
+package com.study.shop.service.impl;
 
 import com.alibaba.dubbo.config.annotation.Service;
-import com.itheima.api.IUserService;
-import com.itheima.constant.ShopCode;
-import com.itheima.entity.Result;
-import com.itheima.exception.CastException;
-import com.itheima.shop.mapper.TradeUserMapper;
-import com.itheima.shop.mapper.TradeUserMoneyLogMapper;
-import com.itheima.shop.pojo.TradeUser;
-import com.itheima.shop.pojo.TradeUserMoneyLog;
-import com.itheima.shop.pojo.TradeUserMoneyLogExample;
+import com.study.shop.api.IUserService;
+import com.study.shop.constant.ShopCode;
+import com.study.shop.entity.Result;
+import com.study.shop.exception.CastException;
+import com.study.shop.mapper.TradeUserMapper;
+import com.study.shop.mapper.TradeUserMoneyLogMapper;
+import com.study.shop.pojo.TradeUser;
+import com.study.shop.pojo.TradeUserMoneyLog;
+import com.study.shop.pojo.TradeUserMoneyLogExample;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

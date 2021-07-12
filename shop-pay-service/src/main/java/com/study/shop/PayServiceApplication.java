@@ -1,7 +1,7 @@
-package com.itheima.shop;
+package com.study.shop;
 
 import com.alibaba.dubbo.spring.boot.annotation.EnableDubboConfiguration;
-import com.itheima.utils.IDWorker;
+import com.study.shop.utils.IDWorker;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;

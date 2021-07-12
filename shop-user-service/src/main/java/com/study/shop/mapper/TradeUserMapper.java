@@ -1,7 +1,7 @@
-package com.itheima.shop.mapper;
+package com.study.shop.mapper;
 
-import com.itheima.shop.pojo.TradeUser;
-import com.itheima.shop.pojo.TradeUserExample;
+import com.study.shop.pojo.TradeUser;
+import com.study.shop.pojo.TradeUserExample;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 

@@ -1,8 +1,8 @@
-package com.itheima.shop.mapper;
+package com.study.shop.mapper;
 
-import com.itheima.shop.pojo.TradeUserMoneyLog;
-import com.itheima.shop.pojo.TradeUserMoneyLogExample;
-import com.itheima.shop.pojo.TradeUserMoneyLogKey;
+import com.study.shop.pojo.TradeUserMoneyLog;
+import com.study.shop.pojo.TradeUserMoneyLogExample;
+import com.study.shop.pojo.TradeUserMoneyLogKey;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 

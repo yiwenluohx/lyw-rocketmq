@@ -1,7 +1,7 @@
-package com.itheima.shop.mapper;
+package com.study.shop.mapper;
 
-import com.itheima.shop.pojo.TradePay;
-import com.itheima.shop.pojo.TradePayExample;
+import com.study.shop.pojo.TradePay;
+import com.study.shop.pojo.TradePayExample;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
