@@ -24,6 +24,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.Resource;
 import java.math.BigDecimal;
 import java.util.Date;
 
@@ -74,7 +75,7 @@ public class OrderServiceImpl implements IOrderService {
             reduceMoneyPaid(order);
 
             //模拟异常抛出
-            //CastException.cast(ShopCode.SHOP_FAIL);
+            CastException.cast(ShopCode.SHOP_FAIL);
 
             //6.确认订单
             updateOrderStatus(order);
@@ -196,7 +197,7 @@ public class OrderServiceImpl implements IOrderService {
         //2. 设置订单ID
         long orderId = idWorker.nextId();
         order.setOrderId(orderId);
-        //3. 核算订单运费
+        //3、核算订单运费
         BigDecimal shippingFee = calculateShippingFee(order.getOrderAmount());
         if(order.getShippingFee().compareTo(shippingFee)!=0){
             CastException.cast(ShopCode.SHOP_ORDER_SHIPPINGFEE_INVALID);

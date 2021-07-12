@@ -10,11 +10,13 @@ import com.study.shop.pojo.TradeCoupon;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.Resource;
+
 @Component
 @Service(interfaceClass = ICouponService.class)
 public class CouponServiceImpl implements ICouponService{
 
-    @Autowired
+    @Resource
     private TradeCouponMapper couponMapper;
 
     @Override
